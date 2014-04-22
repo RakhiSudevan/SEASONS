@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+            
+    		 <record id="view_hr_contract_form_view" model="ir.ui.view">
+                <field name="name">hr.contract.form.inherit</field>
+                <field name="model">hr.contract</field>
+                <field name="type">form</field>
+                <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+                <field name="arch" type="xml">  
+                 <notebook position="inside">
+               				 <page string="Salary Packages">
+               				 <group colspan="2" col="2" name="selection">
+                             
+                              		<field  name="transport_alwnce" />
+                   				 	<field  name="other_alwnce" />
+                   				 	<field  name="Mobile_alwnce" />
+                   				 	<field  name="Petrol_alwnce" />
+                   				     <field  name="House_rent_alwnce" />
+                   				 	<field  name="allowance" />
+                   				 	<field  name="air_ticket" />
+                   				     </group>
+                   			 
+                			 </page>
+                     </notebook>                
+                    
+                       
+                    </field>
+             </record>
+    </data>
+</openerp>
+

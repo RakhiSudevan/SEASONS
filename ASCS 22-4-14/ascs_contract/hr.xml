@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>    
+    		 <record id="view_hr_employee_form_view" model="ir.ui.view">
+                <field name="name">hr.employee.form.inherit</field>
+                <field name="model">hr.employee</field>
+                <field name="type">form</field>
+                <field name="inherit_id" ref="hr.view_employee_form"/>
+                <field name="arch" type="xml">  
+                <field name="name" position="after">
+                 <label for="employee_id" class="oe_edit_only" groups="base.group_hr_user" string="Employee ID"/> 
+               <field name="employee_id"/> 
+                </field>
+              <field name="department_id" position="after">
+                        <field name="date_of_join"/>
+                    </field>      
+                     <field name="address_home_id" position="after">
+                        <field name="father_name"/> 
+                         <field name="mother_name"/> 
+                       </field> 
+                        <field name="passport_id" position="after">
+                        <field name="bank_name"/> 
+                         <field name="bank_code"/> 
+                       </field> 
+                       
+                          
+              <notebook position="inside">
+               				 <page string="Expiry Details">
+               				 <group> 
+                              <separator string="Expiry Date" colspan="2"/>
+                                    <field colspan="2" name="expiry" />
+                              		<field colspan="2" name="pp_expiry" />
+                   				 	<field colspan="2" name="labour_expiry" />
+                   				 	<field colspan="2" name="cina_expiry" />
+                   				 	<field colspan="2" name="emirates_expiry" />
+                   				 	<field colspan="2" name="damam_expiry" />
+                   				 	
+                         	 </group>
+                   		  </page>
+                     </notebook>                
+                
+                </field>
+            </record>     
+            
+            
+            
+            
+        
+    </data>
+</openerp>

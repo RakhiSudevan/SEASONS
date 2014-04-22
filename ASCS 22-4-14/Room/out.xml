@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    
+            
+            <record model="ir.ui.view" id="out_tree_view">
+                <field name="name">ascs.out.tree</field>
+                <field name="model">ascs.out</field>
+                <field name="type">tree</field>
+                <field name="arch" type="xml">
+                    <tree string="tree">                       
+                    </tree>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="out_form_view">
+                <field name="name">ascs.out.form</field>
+                <field name="model">ascs.out</field>
+                <field name="type">form</field>
+                <field name="arch" type="xml">
+                    <form string="form">                        
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.actions.act_window" id="action_out_tree_view">
+                <field name="name">ascs.out</field>
+                <field name="type">ir.actions.act_window</field>
+                <field name="res_model">ascs.out</field>
+		   <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
+                <field name="view_type">form</field>
+                <field name="view_mode">tree,form</field>
+                <field name="view_id" ref="out_tree_view"/>
+            </record>
+
+			<menuitem id="out_menu" name="CheckOut Report" parent="ascs_report_room_menu" action="action_out_tree_view"/>
+
+    
+    </data>
+</openerp>
